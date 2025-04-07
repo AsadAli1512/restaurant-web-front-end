@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* x-axis overflow hidden */ 
+}
+
+html{
+    font-size: 100%; /*For effectiveness */
+    scroll-behavior:smooth;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+/* Background Image Fix */
+#hero::before { /* before: extra styling k liye */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/hero.jpeg);
+    background-size: cover; /*Cointainer k mutabik img pouri set ho jai gi */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Img fixed rhy gi(apni jgha) view point k sath */
+    filter: brightness(65%);
+}
+
+#hero_content{
+    /* Control element placement */
+    position: absolute;
+    color:white; 
+    text-shadow: 2px 2px 2px pink;
+}
+
+#hero_content h1{
+    /* 1rem = 16px */
+    font-size: 3rem;
+}
+#hero_content h2{
+    font-size:2rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    text-shadow: brown;
+
+}
+#hero_content a{ 
+    border-radius: 25px;
+    font-size: 1.8rem;
+    background:none;
+padding: 3px 20px ;
+border: 1px solid pink;
+cursor: pointer;
+color: white;
+text-decoration: none;
+}
+#hero_content a:hover{
+    background: rgba(255, 255, 255, 0.5);
+   color:brown;
+}
+
+/* -----Header----  */
+header{
+    /* Scroll Position */
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    /* line ki bech ki height (line-spacing) */
+    line-height: 80px;
+}
+
+#navbar{
+display: flex;
+justify-content: space-around;
+background: rgba(0,0,0,0.2);
+}
+#navbar h1{
+    color: rgb(201, 154, 161);
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px whitesmoke;
+    font-family:cursive;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+padding: 3px 12px;
+}
+#navbar ul li a:hover, #phone a:hover, #mobile_menu ul li a:hover{
+    /* background: rgba(255, 255, 255, 0.5); */
+    color: white;
+}
+#navbar ul li a{
+    color:orange;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+#phone a{
+    text-decoration: none;
+    color:pink;
+    font-size: 15px;
+    /* padding: 3px 12px;
+    border-radius: 10px; */
+    /* Prevents text from wrapping */
+    white-space: nowrap; 
+}
+
+/* ---Mobile Menu */
+#mobile_menu{
+    display: none;
+}
+#mobile_menu ul{
+    display: flex;
+
+   }
+#mobile_menu ul li{
+    padding: 0 5px;
+    list-style: none;
+   }
+   #mobile_menu ul li a{
+    color:orange;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 20px;
+   }
+
+/* -----About Menu Section----- */
+#mneu{
+    padding: 25px 0;
+}
+#section{
+    padding: 25px 0;
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    background-color: rgb(238, 220, 220);
+}
+#menu_row{
+    display: flex;
+    padding: 0 100px;
+    background-image: url(images/background.jpeg);
+    /* Imp for responsive */
+    flex-wrap: wrap;
+}
+#menu_col {
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    background-color:lightgray;
+    margin: 5px;
+    flex:1;
+}
+#menu_col h2{
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px 2px black;
+    margin: 0;}
+#image {
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 5px;
+}
+#image img{
+    width: 300px;; 
+    height: 300px; 
+    border-radius: 50%; 
+    /* img fit in circle */
+    object-fit: cover; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+.box{
+    display: flex;
+    flex-direction: column;
+text-align: center;
+    align-items: center;
+    margin: 5px;
+
+} 
+
+/* ---Checf Section--- */
+#chef{
+    padding: 25px;
+    background-color: lightyellow;
+}
+#chef_row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#chef_row h2{
+    color:rgb(248, 150, 150);
+}
+.chef_col{
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+#chef_img{
+    width:400px;
+    height:400px;
+    margin:auto;
+}
+#chef_img img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* About US section */
+#about{
+    padding: 25px 0;
+    margin-top: 20px;
+    background-color:rgba(243, 250, 210,0.1) ;
+}
+#about_row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#about_row p{
+font-size: 25px;
+font-family: cursive;
+text-align: justify;
+}
+#about_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 100px;
+}
+.about_col{
+    /* 1 row mai */
+  flex:1;  
+}
+#about_img{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 50%;
+}
+#about_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+}
+.about_col h1{
+    text-align: center;
+    font-family: cursive;
+}
+
+/* Conatct Section */
+#contact{
+    padding: 25px 0;
+    background-color:lightgoldenrodyellow ;
+}
+
+#contact_row{
+    display:flex;
+    /* verticallu */
+    align-items: center;
+    /* horizontaly */
+    justify-content: center;
+    padding: 0 100px;
+flex-wrap: wrap;
+}
+.contact_col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex:1;  
+}
+.contact_col p,a{
+    text-decoration: none;
+    font-weight: bold;
+    color:brown;
+    margin: 10px;
+}
+#social_icons a{
+   margin: 3px;
+color: blue;
+}
+.contact_col form{
+display: flex;
+flex-direction: column;
+background-color: brown;
+width: 80%;
+color:black;
+}
+.contact_col form h2{
+    text-align: center;
+    font-family: cursive;
+}
+.contact_col form input,textarea{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5rem;
+}
+.contact_col form textarea{
+    height: 100px;
+}
+.contact_col form button{
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: orange;
+    font-size: 1.5rem;
+    font-family: cursive;
+    cursor: pointer;
+}
+.contact_col form button:hover{
+    background-color: black;
+    color: orange;
+}
+
+#top{
+    position:absolute;
+    bottom: 12px;
+    right: 12px;
+}
+#top a{
+    color:white;
+    font-size: 1.5rem;;
+}
+/* Footer */
+#footer{
+    background-color: #333;
+    padding: 20px;
+    position: relative;
+}
+#footer h4{
+    color: orange;
+    text-align:center;
+}
+#footer h4 a{
+    text-decoration: none;
+    color: wheat;
+}
+
+/* For responsivity.. */
+
+/* ----Media Query */
+@media screen and (max-width:768px){
+    header{
+        position: absolute;
+    }
+   #mobile_menu{
+    display: block;
+    justify-content: center;
+   } 
+   #navbar ul{
+    display: none;
+   }
+   html{
+    font-size: 90%;
+   }
+   #phone a{
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+#menu_row, #about_row, #contact_row{
+    flex-wrap: wrap;
+    padding: 0 10px 0 10px;
+}
+}
+/* Mobile Media */
+@media screen and (max-width:425px){
+    header{
+        position: absolute;
+    }
+html{
+    font-size: 70%;
+}
+#phone a{
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 0 3px;
+}
+#about_img{
+    width: 200px;
+    height: 200px;
+}
+}
